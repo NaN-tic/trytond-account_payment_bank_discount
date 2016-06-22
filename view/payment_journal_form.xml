@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/field[@name='process_method']" position="after">
+        <separator id="bank_discount" string="Bank Discount" colspan="4"/>
+        <label name="bank_discount_account"/>
+        <field name="bank_discount_account"/>
+        <label name="bank_discount_journal"/>
+        <field name="bank_discount_journal"/>
+        <label name="bank_discount_percent"/>
+        <group id="bank_discount_percent" col="3">
+            <field name="bank_discount_percent" factor="100" xexpand="0" xfill="0"/>
+            <label name="bank_discount_percent" string="%" xalign="0.0" xexpand="1" xfill="1"/>
+        </group>
+        <label name="bank_discount_clearing_margin"/>
+        <field name="bank_discount_clearing_margin"/>
+        <newline/>
+    </xpath>
+</data>

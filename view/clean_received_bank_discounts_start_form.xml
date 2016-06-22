@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<form string="Clean Received Bank Discounts" col="2">
+    <image name="tryton-dialog-information" xexpand="0" xfill="0"/>
+    <label string="Enter the date until you want to clean the received bank discounts. It will take account the 'Margin for Bank Discount Clearing' of each Payment Journal"
+        id="message" yalign="0.0" xalign="0.0" xexpand="1"/>
+    <label name="date"/>
+    <field name="date"/>
+</form>

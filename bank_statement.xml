@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data depends="account_bank_statement_account">
+        <record model="ir.ui.view" id="bank_statement_move_line_form_view">
+            <field name="model">account.bank.statement.move.line</field>
+            <field name="inherit"
+                ref="account_bank_statement_account.account_bank_statement_move_line_form_view"/>
+            <field name="name">bank_statement_move_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="statement_line_view_tree">
+            <field name="model">account.bank.statement.move.line</field>
+            <field name="inherit"
+                ref="account_bank_statement_account.account_bank_statement_move_line_tree_view"/>
+            <field name="name">bank_statement_move_line_tree</field>
+        </record>
+    </data>
+</tryton>

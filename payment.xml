@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- account.payment.journal -->
+        <record model="ir.ui.view" id="payment_journal_view_form">
+            <field name="model">account.payment.journal</field>
+            <field name="inherit"
+                ref="account_payment.payment_journal_view_form"/>
+            <field name="name">payment_journal_form</field>
+        </record>
+
+        <!-- account.payment -->
+        <record model="ir.ui.view" id="payment_view_form">
+            <field name="model">account.payment</field>
+            <field name="inherit" ref="account_payment.payment_view_form"/>
+            <field name="name">payment_form</field>
+        </record>
+
+        <!-- account.payment.clean_received_bank_discounts wizard -->
+        <record model="ir.ui.view" id="clean_received_bank_discounts_start_view_form">
+            <field name="model">account.payment.clean_received_bank_discounts.start</field>
+            <field name="type">form</field>
+            <field name="name">clean_received_bank_discounts_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="act_clean_received_bank_discounts">
+            <field name="name">Clean Received Bank Discounts</field>
+            <field name="wiz_name">account.payment.clean_received_bank_discounts</field>
+        </record>
+        <menuitem id="menu_clean_received_bank_discounts"
+            action="act_clean_received_bank_discounts"
+            parent="account_payment.menu_payments"
+            sequence="100"/>
+    </data>
+</tryton>
